@@ -1,0 +1,68 @@
+body {
+  height: 2000px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+}
+
+.box:nth-child(2) {
+  margin-top: 10px;
+}
+
+.colorBox {
+  /*배경색 지정*/
+  background-color: rgb(0, 0, 0, 0.2);
+
+  background-image: url("./images/coffee-g29070ebf6_1280.jpg");
+
+  /* 배경 이미지 크기 지정 */
+  background-size: cover;
+
+  /* cover는 크기 맞게 자름, contain은 사이즈 만큼 */
+
+  /* 배경 이미지의 반복 방법 지정 */
+  background-repeat: no-repeat;
+
+  /* 배경 이미지의 위치를 지정 * x축, y축 순서 키워드 순서는 상관없음, right 등 */
+  /* 오프셋 요소의 오프셋 값으로 지정한다. botoom 10px, left 10px 등 */
+  /*  background-position: bottom 10px right 10px; */
+
+  /* 배경 이미지의 시작점을 지정, 기본값은 padding-box */
+  background-origin: padding-box;
+
+  /* 배경색의 지정 범위, 기본값은 border-box */
+
+  background-clip: padding-box;
+
+  border-color: rgba(0, 0, 0, 0.2);
+
+  /* 기본값이 scroll, fixed는 뒤에 배경을 놓고 그 위에 구멍을 뚫는 것과 같음 */
+  /* background-attachment: fixed; */
+
+  background-blend-mode: multiply;
+
+  overflow: scroll;
+
+  padding: 10px;
+
+  /* 단축속성을 사용하면 모든 것이 기본값으로 바뀜, 포지션 값 / 이미지 사이즈 */
+
+  background: url("./images/coffee-g29070ebf6_1280.jpg") center top / cover
+    no-repeat red padding-box padding-box;
+}
+
+/* padding-box 앞이 오리진 뒤가 클립, 단축 속성에 블렌드 모드가 포함이 되지 않음*/
+
+/* 단축속성
+background-attachment
+background-clip
+background-color
+background-image
+background-origin
+background-position (en-US)
+background-repeat
+background-size
+*/
