@@ -24,7 +24,9 @@ body {
 
   position: fixed;
   top: 0;
-  right: 20px;
+  right: -20px;
+
+  /* 방향에 따라 픽셀 앞 양수, 음수가 달라진다.*/
 
   /* static : 문서 흐름상 위치할 곳에 위치이자 기본값 */
   /* relative : 문서 흐름상 위치할 곳에 위치하지만 오프셋 영향 有 */
@@ -48,4 +50,12 @@ body {
   position: absolute;
   background-color: red;
   z-index: 200;
+}
+
+.btn {
+  position: absolute;
+  height: 100px;
+  background-color: tomato;
+  left: 100px;
+  right: 100px;
 }

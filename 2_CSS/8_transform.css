@@ -1,0 +1,111 @@
+body {
+  padding-bottom: 200px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+
+  text-align: center;
+  line-height: 100px;
+  /* transiton은 수치와 같이 값의 연산이 가능한 단위에만 적용된다. */
+  /* transition & hover에 넣는다면 돌아오는 효과가 없으므로 속성이 다름.
+    - duration: 해당 움직임만큼 걸리는 시간
+    - delay   : 해당 움직임이 이뤄지기 까지 지연시간 
+    - property: 적용하고자 하는 속성을 지정 ,로 사용 
+    - timing-function: 해당 움직임이 이뤄지는 속도의 변화폭을 지정 ex) 처음에 빠르다가 느리게, 처음에 느리다 빠르게 */
+  transition-duration: 1s;
+  transition-delay: 0.4s;
+  transition-property: color, transform;
+  transition-timing-function: ease-in;
+  /*lener 균등하게, ease-in 빠르게, ease-out 느려지는  */
+
+  transition: color 0.25s, transform 3s, opacity 0.5s;
+}
+
+.box:hover {
+  opacity: 0;
+  color: red;
+  background-color: yellowgreen;
+  width: 200px;
+}
+
+.box ~ .box {
+  margin-top: 50px;
+}
+
+.container {
+  perspective: 500px;
+}
+
+.container + .container {
+  margin-top: 100px;
+}
+/* transform은 레이아웃에 영향을 주지 않는다. > 리페인트 */
+/* height, width, display 등은 레이아웃에 영향을 준다 > 리플로우 */
+
+/* translate : 기준이 자기 자신이다. 50%로 했을 경우 box의 50% 만큼 */
+.translate .box:nth-of-type(1):hover {
+  transform: translateX(30px);
+}
+
+.translate .box:nth-of-type(2):hover {
+  transform: translateY(-30px);
+}
+
+.translate .box:nth-of-type(3):hover {
+  transform: translate(20px, 20px);
+}
+
+.translate .box:nth-of-type(4):hover {
+  transform: translateZ(30px);
+}
+
+/* scale : 요소의 비율을 조절한다. 컨텐츠도 영향을 받는다. */
+
+.scale .box {
+  /* 변형의 기준점을 옮긴다. */
+  transform-origin: left top;
+}
+
+.scale .box:nth-of-type(1):hover {
+  transform: scaleX(1.2);
+}
+
+.scale .box:nth-of-type(2):hover {
+  transform: scaley(0.7);
+  /* height: 50px; 이렇게 하면 다른 박스들도 영향을 받음 */
+}
+
+.scale .box:nth-of-type(3):hover {
+  transform: scale(1.3);
+}
+
+.scale .box:nth-of-type(4):hover {
+  transform: scaleZ(1.3);
+}
+
+.rotate .box:nth-of-type(1):hover {
+  transform: rotateX(30deg);
+}
+
+.rotate .box:nth-of-type(2):hover {
+  transform: rotateY(45deg);
+}
+
+.rotate .box:nth-of-type(3):hover {
+  transform: rotate(45deg);
+}
+
+.skew .box:nth-of-type(1):hover {
+  transform: skewX(25deg);
+}
+
+.skew .box:nth-of-type(2):hover {
+  transform: skewY(10deg);
+}
+
+.skew .box:nth-of-type(3):hover {
+  transform: skew(45deg, 30deg);
+}

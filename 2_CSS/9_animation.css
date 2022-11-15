@@ -1,0 +1,48 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: tan;
+  animation-name: zipgagopa, fadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation: zipgagopa 1s 2s 11, fadeIn 0.25s;
+}
+
+.box:hover {
+  animation-play-state: paused;
+}
+
+@keyframes zipgagopa {
+  from {
+    /*시작전에 값이 없을 경우 굳이 FROM 안 써도 됨 */
+    transform: translate(300px);
+  }
+  to {
+    transform: translate(100px);
+  }
+
+  0% {
+    transform: translate(100px) rotate(0);
+  }
+
+  50% {
+    transform: translate(400px) rotate(180deg);
+  }
+
+  100% {
+    transform: translate(300px) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

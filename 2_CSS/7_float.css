@@ -7,5 +7,24 @@ img:nth-child(2) {
   float: left;
 }
 p {
-  font-size: 4px;
+  font-size: 6px;
+}
+
+.container {
+  border: 3px solid red;
+}
+.box {
+  /* display: inline-block;
+  font-size: 1rem; /* 글씨로 인식돼서 자동으로 4px만큼의 여백 가로배열 */
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  float: right;
+}
+
+.clearFix::after {
+  /* clear를 하려면 인라인 요소는 불가능하다. */
+  display: block;
+  content: "";
+  clear: both;
 }

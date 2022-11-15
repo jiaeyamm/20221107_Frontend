@@ -35,7 +35,7 @@ body {
 
   /* 배경색의 지정 범위, 기본값은 border-box */
 
-  background-clip: padding-box;
+  background-clip: padding-box;-
 
   border-color: rgba(0, 0, 0, 0.2);
 
