@@ -1,0 +1,72 @@
+.container {
+  /* padding: 30px; */
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* flex-direction의 기본값은 row(행, 가로)이다. 
+     row-reverse는 시작점이 반대로 바뀐다. column(행, 세로)도 있다. 
+     space-between은 남은 여백을 아이템에게 동일한 값을 준다. 
+     space-around 시작과 끝선까지 
+     */
+  height: 400px;
+  align-items: flex-end;
+  /* align-items: flex-start; */
+  /* align과 justify은 주축에 따라 쓰임이 다르다.
+     align은 교차축에 대해, justify는 주축에 대해 지정한다. */
+  flex-wrap: nowrap;
+  /* flex-wrap : 넘치는 자식을  처리하는 방법 */
+  width: 200px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.box {
+  display: flex;
+
+  flex-basis: 100px;
+  /* 주축의(row는 너비, col인 경우 높이 공간이 남을땐 100px 유지하고, 부족할 땐 줄어든다. */
+
+  justify-content: center;
+  align-items: center;
+
+  /* width: 300px; */
+  height: 100px;
+
+  background-color: blanchedalmond;
+  /* text-align: center; */
+  /* line-height: 100px; */
+  margin: 10px;
+}
+
+.box:nth-of-type(1) {
+  /* flex-grow: 2;
+  flex-shrink: 1; 
+  flex: 2 1 100px; */
+  flex: 1;
+}
+
+.box:nth-of-type(2) {
+  /* flex-grow: 1;
+  flex-shrink: 2; 
+  flex: 1 2 100px; */
+  flex: 1;
+}
+
+.box:nth-of-type(3) {
+  /* flex-grow: 3;
+  flex-shrink: 1; 
+  flex: 3 1 100px; */
+  flex: 1;
+}
+
+/* flex-grow는 flex-basis의 남은 여백을 가져가는 비율 */
+/* flex-shrink는 flex-basis의 남은 여백 중 줄어드는 비율 */
+/* felx-shrink: 0; 을 주면 공간이 모자라도 그대로의 크기를 유지 */
+/* flex : grow shrin basis 순 */
+
+@keyframes slide {
+  to {
+    transform: translate(200px);
+  }
+}

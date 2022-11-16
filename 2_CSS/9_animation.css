@@ -10,6 +10,7 @@
   animation-direction: alternate;
   animation-fill-mode: both;
   animation: zipgagopa 1s 2s 11, fadeIn 0.25s;
+  /* 처음 초는 듀레이션, 두번째 초는 딜레이 */
 }
 
 .box:hover {

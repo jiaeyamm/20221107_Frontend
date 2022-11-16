@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+body .box {
+  max-width: 300px;
+  max-height: 200px;
+  width: 50vw;
+  height: 50vh;
+  background-color: red;
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .box {
+    background: black;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .box {
+    background: blue;
+  }
+}
+
+/* 미디어 쿼리는 우선순위 점수가 높은 선택자가 반영되기때문에 미디어를 만들 때 같은 점수로 적용해서 사용할 것 */
+/* 또한 인라인 방식이 우선점수가 1000점이기 때문에 인라인 방식을 html에 적으면 css에 적은 속성이 적용이 안 됨 */
+/* 무한대점수 !important; */
