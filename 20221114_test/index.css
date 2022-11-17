@@ -1,0 +1,20 @@
+table {
+  text-align: center;
+  border-collapse: collapse;
+  width: 600px;
+  height: 200px;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
