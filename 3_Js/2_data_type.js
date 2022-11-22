@@ -144,8 +144,11 @@ var obj = {
   name: "seok",
 };
 
+obj.height = 174; // 객체에 없는 속성이어도 추후 만들기가 가능하다.
+
 var copyObj = obj; // 참조값을 가져오기 때문에 copyObj를 변경하면 obj도 같이 변경된다.
 
 copyObj.age = 40;
 
 console.log(copyObj, obj);
+console.log(obj.height);
