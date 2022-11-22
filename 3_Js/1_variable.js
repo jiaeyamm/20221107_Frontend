@@ -63,11 +63,14 @@ var num_2 = 30;
 var result02 = num_1 + num_2;
 
 // 문제 3. num1과 num2의 값을 바꿔서 할당
-// num2 값을 임시로 저장할 변수 temp 선언
+// num2 값을 임시로 저장할 변수 temp 선언 temp = 30, num_2=20, num_1(30)=20
 var temp;
 temp = num_2;
 num_2 = num_1;
 num_1 = temp;
+
+var num3, num4;
+num3 = num4 = 40;
 
 console.log("result02 : ", result02);
 console.log(num_1, num_2);
