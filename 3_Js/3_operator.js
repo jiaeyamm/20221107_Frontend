@@ -127,3 +127,8 @@ console.log(`안녕하세요 저는 ${address}에 사는 ${age}세 ${name}입니
 // typeof 연산자 : 피연산자의 데이터 타입을 반환한다.
 
 console.log(typeof "안녕하세요");
+
+// parseInt 문자열을 숫자로 바꾼다. => 숫자로 변환 가능한 문자열만 바꾼다. ex) 1, 2, 3, 4, 5 등
+//  => 숫자로 변환 불가능한 경우엔 NaN(Not a Number)을 반환한다.
+
+console.log(parseInt("1"));
