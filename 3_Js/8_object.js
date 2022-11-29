@@ -1,6 +1,7 @@
 /* 
     객체(Object)
         - key-value 형태로 여러 데이터를 저장할 수 있다. 
+        - 여러 데이터를 합쳐서 고유한 정보를 나타내는 형태.
 */
 
 let user = {
@@ -73,6 +74,7 @@ user02.introduce();
 let triangle = {
   width: 20,
   height: 40,
+  // 객체 메서드 함축 표현 getArea () { }, function 키워드 제외.
   getArea: function () {
     console.log((this.width * this.height) / 2);
   },

@@ -103,13 +103,18 @@ let getData = function (fetchData) {
 getData();
 // fetchData();
 
+// 식별자가 필요하다 => 함수 선언식 혹은 함수 표현식의 형태로 식별자를 써야 한다.
+// => 값으로 전달되는 경우에는 식별자가 필요없다.
+// function(a, b) {
+//  return a + b; }
+
 /*
     화살표 함수(Arrow Function) - ES6(2015)에 추가된 함수
         => function 키워드를 사용하지 않고 "=>" 를 통해서 간결하게 작성 가능
         => 함수 표현식으로만 작성 가능하다. 
         => 코드 블럭(중괄호)과 return 키워드를 생략하면 표현식의 값을 리턴한다.
             => 기본적으로 중괄호{}를 코드 블록으로 인식하기 때문에, 객체일 때 명시하기 위해서 ()를 붙인다. 
-            => 반환값이 객체라면 () 안에 {}를 작성해야 return 생략이 가능하다. 
+            => 중괄호와 return이 생략되면 반환값이 객체라면 () 안에 {}를 작성해야 return 생략이 가능하다. 
         => 다른 함수의 값으로 함수를 전달할 때 많이 사용한다. 
         => 함수 호이스팅이 일어나지 않는다. 
         => this 바인딩이 일어나지 않는다. 
@@ -158,3 +163,40 @@ let globalFuc = function () {
 };
 
 globalFuc(); // 처음 들어온 함수가 가장 마지막에 나간다.(스택 구조) FILO(first in, last out)
+
+function foo() {
+  return "foo";
+}
+
+// foo()로 기재하면 리턴값이 "foo"가 할당 되어 출력값이 "foo", foo;만 하면 function foo
+// BS-T: ()를 생략하면 함수 그 자체를 가리킨다. => 함수를 값으로 사용할 때는 호출이 아니라 식별자를 참조해야 함.
+console.log(foo);
+let copyFunc = foo;
+console.log(foo);
+console.log(copyFunc);
+
+/*
+  
+  콜백함수(Callback Function)
+    => 함수의 값으로 전달되는 함수
+    => 함수의 실행되는 코드가 나중에 정해질 때 사용한다. 
+    => 콜백함수로 익명함수를 많이 사용한다. 
+    => 값으로 전달할 때는 호출이 아니라 함수 자체를 전달해야 한다. 
+
+*/
+
+function repeat(repeatCount, callback) {
+  for (let i = 0; i < repeatCount; i++) {
+    callback();
+  }
+}
+
+function print() {
+  console.log("코드 실행!");
+}
+
+repeat(5, print);
+
+repeat(5, function () {
+  console.log("코드 실행! 익명");
+});
