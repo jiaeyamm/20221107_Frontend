@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 10px;
+        border: 3px solid black;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box"></div>
+    </div>
+    <div class="numBox">
+      <input type="number" />
+      <button>등록</button>
+    </div>
+    <a href="https://google.com">Google</a>
+    <script>
+      let inputElem = document.querySelector("input");
+      let numBtn = document.querySelector(".numBox button");
+
+      // button 클릭시 input 값대로 박스의 크기 바꾸기
+      numBtn.addEventListener("click", function () {
+        box.style.width = inputElem.value + "px";
+      });
+
+      box.style.width = inputElem.value + "px";
+      numBtn.addEventListener("click", function () {
+        box.style.width = inputElem.value + "px";
+      });
+
+      inputElem.addEventListener("keyup", function () {
+        console.log(this.value); // this.value = e.target
+      });
+
+      //keyup : 키를 눌렀다가 뗄 때 한번 발생
+      //keydown : 키를 누를 때 한번 발생
+      //keypress : 키를 누르고 있는 동안 연속 발생
+      //});
+
+      // parseInt(문자열) : 숫자로 변환한다. 단, 변환 가능한 문자열이여야 한다.
+      // => 숫자로 변환 불가능한 데이터를 전달하면 NaN(Not a Number)을 반환한다.
+      // NaN은 isNaN() 함수로 확인해야한다.
+      // console.log(typeof inputElem.value);
+      // });
+      // input 입력값(value)은 문자열.
+
+      // 숫자가 필요하면
+      // console.log(parseInt(inputElem.value));
+
+      /* 
+        inputElem.addEventListner("keypress", function(e){
+            console.log(e.target.value);
+        }
+
+        inputElem.addEventListner("keypress", function(e){
+            if(e.key === "Enter") {
+                alert(e.target.value);
+        }
+
+
+      */
+
+      document.querySelector("a").addEventListener("click", function (e) {
+        // Event.preventDefualt() : 요소가 가지는 기본 기능을 실행하지 않는다.
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

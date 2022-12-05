@@ -177,3 +177,7 @@ console.log(doubleList, numList);
 
 let doubleList02 = numList.map((num) => num * 2);
 console.log(doubleList02, numList);
+
+let doubleList2 = numList.map(function (num) {
+  return num * 3;
+});
