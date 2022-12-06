@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 3px solid black;
+        padding: 10px;
+      }
+      .box {
+        width: 100px;
+        background-color: black;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+    <div class="numBox">
+      <input type="number" />
+      <button>등록</button>
+    </div>
+    <script>
+      let inputElem = document.querySelector("input");
+      let numBox = document.querySelector("numBox button");
+
+      numBtn.addEventListener("click", function () {
+        box.style.width(inputElem.value + "px");
+      });
+
+      let containeElem = document.querySelector(".container");
+
+      containerElem.addEventListener("mouseover", function () {
+        containerElem.style.borderColor = "blue";
+      });
+    </script>
+  </body>
+</html>
