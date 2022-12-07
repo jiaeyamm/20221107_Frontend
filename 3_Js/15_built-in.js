@@ -67,13 +67,80 @@ let minutes = today.getMinutes();
 let seconds = today.getSeconds();
 console.log(hours, minutes, seconds);
 
-today.setFullYear(2021);
+console.log(`${year}년, ${month}월 ${date}일 ${day}`);
+
+// Date.prototype.toLocaledateString() : 사용자의 문화권에 맞게 시간 표기를 해준다.
+// let dateStr = today.toLocaleDateString("ko-KR", {
+//   year: "numeric",
+//   month: "short",
+//   day: "numeric",
+//   hour: "numeric",
+// });
+let dateStr = today.toLocaleDateString("ko-KR", {
+  dateStyle: "full",
+});
+
+let timeStr = today.toLocaleTimeString("ko-KR", {
+  timeStyle: "full",
+});
+console.log(dateStr, timeStr);
 
 today.setMonth(9);
 today.setDate(25);
 today.setDate(today.getDate() - 1);
 
+// 날짜로 변환 가능한 문자열을 통해서 특정 날짜를 생성할 수 있다.
 let yesterday = new Date("2021-11-6");
+console.log(yesterday);
+
 console.log(today);
 
-console.log(yesterday);
+// Math 수학관련 프로퍼티와 메서드 제공 => 주로 정적 프로퍼티
+
+console.log(Math.PI * 2 * 10);
+
+console.log(Math.sin(Math.PI / 2));
+
+let float = 1.52412321;
+let int = parseInt(float); // parseInt()는 실수를 정수로 바꿀 때도 사용한다. 소숫점 이하의 숫자를 버린다(내림).
+
+console.log(float, int);
+
+// 소수점 이하 내림
+
+console.log(Math.floor(float)); // 소수점 이하의 숫자 내림 (rounddown)
+
+console.log(Math.ceil(float)); // 소수점 이하의 올림 (round up)
+
+// 소수점 이하 반올림
+console.log(Math.round(float)); // 반올림 처리한다.
+
+// 111 => 120
+
+let ex1 = Math.ceil(111 / 10) * 100;
+console.log(ex1);
+
+// Math.random() : 0부터 1 사이의 랜덤한 실수를 반환한다.(실제 랜덤은 아님)
+console.log(Math.floor(Math.random() * 5) + 5); // * 뒤의 숫자는 범위 + 뒤에 숫자는 시작점
+
+// 1부터 45까지 6개 번호 추첨하기 중복 x result 반환함수만들기
+// => 1. 1부터 45까지 들어 있는 배열에서 랜덤한 인덱스 6번 꺼내면 됨. =>인덱스 범위가 넘지 않게 주의
+// => 2. result에 담으면서 이미 있는 값인지 확인하기(배열 관련 함수)
+// => 3.
+
+function getLottoNum() {
+  let num = Math.floor(Math.random() * 45) + 1;
+  let result = [];
+
+  // result 배열의 길이가 6이 되기 전까지만 실행, 즉 여섯개가 되는 순간 반복 중지
+  while (result.length < 6) {
+    // reuslt 배열에 랜덤한 수 num이 없을 때에만 push
+    let num = Math.floor(Math.random() * 45) + 1;
+    if (!result.includes(num)) {
+      result.push(num);
+    }
+  }
+  return result;
+}
+
+console.log(getLottoNum());

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노랑풍선 로그인 화면</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .logoHome {
+        width: 375px;
+        height: 812;
+      }
+      .logo {
+        width: 250px;
+        height: 75px;
+      }
+      h2 {
+        font-size: 16px;
+        font-weight: normal;
+      }
+      .lineBottom {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logoHome">
+        <h1 class="logo">
+          <img
+            src="./images/coffee-g29070ebf6_1280.jpg"
+            alt="노랑풍선 로고"
+            class="logo"
+          />
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div>
+        <form action="server" name="login" method="post">
+          <div>
+            <input type="text" placeholder="이메일 주소 혹은 ID" />
+          </div>
+          <div>
+            <input type="password" placeholder="비밀번호" />
+          </div>
+          <input type="submit" name="로그인" id="logIn" value="로그인" />
+        </form>
+        <span><a href="">아이디/비밀번호 찾기</a></span>
+        <span><a href="">비회원 예약조회</a></span>
+      </div>
+      <h2>
+        <span class="lineBottom"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+        간편하게 로그인하기
+        <span class="lineBottom"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </h2>
+      <div>
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+      </div>
+      <h2>
+        <span class="lineBottom"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+        아직도 회원이 아니세요?
+        <span class="lineBottom"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        >
+      </h2>
+      <input type="submit" value="회원가입" />
+      <div>
+        <p>노랑 풍선 회원으로 가입을 하시면 포인트 적립,<br /></p>
+      </div>
+    </main>
+  </body>
+</html>
