@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1214 실습예제 인터파크 전문몰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        li {
+            width: 120px;
+        }
+        .tripList {
+            margin-top: 25px;
+            border-top: 2px solid #333;
+            padding: 50px;
+            position: relative;
+            width: 1200px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left {
+            position: absolute;
+            left: 0px;
+            top: 90px;
+        }
+        .right {
+            position: absolute;
+            right: 0px;
+            top: 90px;
+        }
+        .content {
+            color: #888;  
+            font-size: 13px;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+    <article>
+        <h2>인터파크 전문몰</h2>
+        <div class="tripList">
+            <div>
+            <ul class="macao">
+            <li><a href="#" title="마카오"><img src="./ex/images/0008.jpg" alt="마카오사진"></a>
+            <li><a href="#" title="마카오">마카오</a></li>
+            <li><a href="#" title="마카오" class="content">요즘 여기가 대세</a></li>
+            </ul>
+            </div>
+            <div>
+            <ul>
+            <li><a href="#" title="베트남"><img src="./ex/images/0020.jpg" alt="베트남사진"></a>
+                <li><a href="#" title="베트남">베트남</a></li>
+                <li><a href="#" title="베트남" class="content" id="ellpasis">요즘 대세는 베트남 여행</a></li>
+            </ul>
+            </div>
+            <div>
+            <ul>
+            <li><a href="#"><img src="./ex/images/0012.jpg" alt="하와이 사진"></a></li>
+                <li><a href="#" title="하와이">하와이</a></li>
+                <li><a href="#" title="하와이" class="content">이젠 하와이도 인터파크</a></li>
+            </ul>
+            </div> 
+            <div>
+            <ul>
+            <li><a href="#" title="호주"><img src="./ex/images/0011.jpg" alt="호주 사진"></a></li>
+                <li><a href="#" title="호주">호주</a></li>
+                <li><a href="#" title="호주" class="content">우리가 꿈꾸는 최고의 여행</a></li> 
+            </ul>  
+            </div>
+            <div>
+            <ul>
+            <li><a href="#" title="클럽메드"><img src="./ex/images/0013.jpg" alt="클럽메드 사진"></a>
+                <li><a href="#" title="클럽메드">클럽메드</a></li>
+                <li><a href="#" title="클럽메드" class="content">프리미엄 올인클루시브</a></li>
+            </ul>
+            </div>
+        <img src="./ex/images/left_btn.png" alt="왼쪽화살표" class="left">
+        <img src="./ex/images/right_btn.png" alt="오른쪽화살표" class="right">
+        </div>
+    </article>
+</main>
+<footer>
+</footer>
+</body>
+</html>

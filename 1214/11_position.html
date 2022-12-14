@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_position(요소의 배치방법) p.280</title>
+    <style>
+        .wrap {
+            width: 1025px;
+            height: 500px;
+            border: 3px solid #000;
+            background-color: #ff0;
+            position: relative;
+            left: 500px;
+            top: 200px;
+        }
+        .box01, .box02, .box03 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box01 {
+            background-color: red;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+        }
+        .box02 {
+            background-color: #0f0;
+            position: absolute;
+            left: 50px;
+            z-index: 3;
+        }
+        .box03 {
+            background-color: #00f;
+            position: absolute;
+            left: 100px;
+            color : #fff;
+            bottom: 200px;
+        }
+        aside {
+            width: 150px;
+            height: 300px;
+            border: 3px solid #000;
+            background: #ccc;
+            text-align: center;
+            position: fixed;
+            right: 50px;
+            bottom: 150px;
+            box-shadow: 0px 0px 3px #333333; /*좌표 y좌표 그림자정도 색상 */
+            z-index: 10;
+        }
+
+        aside > a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 14px 10px;
+            background-color: #000;
+            border-radius: 50%;
+            position: relative;
+            top: 240px
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS_position(요소의 배치방법) p.280</h2>
+    <p>포지션(position) 속성이란? 레이아웃 작업 시 사용자가 부모요소 박스안에서 원하는 콘텐츠를 선택하여 배치하기 위한 속성</p>
+
+    <ul>
+        <li>stctic - 요소가 가지고 있는 기본 위치값</li>
+        <li>absolute - 절대 배치 </li>
+        <li>relative - 상대 배치</li>
+        <li>fixed - 고정 배치</li>
+        <li>inherit - 부모로부터 상속</li>
+    </ul>
+    <p>위 포지션 속성을 사용 시 left, right, top, bottom 위치값을 설정할 수 있다.</p>
+    <p>z-index 속성은 먼저 작성된 태그가 z-index값이 0이며, 나중에 작성된 태그 순서대로 번호가 자동으로 매겨진다. z-index 속성을 사용하여 위/아래 순서도 변경이 가능하다.</p>
+
+    <h3>1. 절대배치(absolute)</h3>
+    <h3>2. 상대배치(relative)</h3>
+    <h3>3. 고정배치(fixed)</h3>
+
+    <div class="wrap">
+        <div class="box01">빨강</div>
+        <div class="box02">초록</div>
+        <div class="box03">파랑</div>
+    </div>
+
+    <aside>
+        <p>배너</p>
+        <a href="#" title="위로 바로가기">top</a>
+    </aside>
+</body>
+</html>

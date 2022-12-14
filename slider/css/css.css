@@ -5,11 +5,49 @@
   padding: 0px;
 }
 
+header {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+}
+
+#gnbList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#gnbList li a {
+  display: flex;
+  width: 100px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+#gnbList li a:hover {
+  color: #fff;
+  background: #ccc;
+}
+
 .container {
   overflow: hidden;
   position: relative;
 }
 
+header .menu {
+  display: none;
+}
 .slidelist {
   display: flex;
   text-align: center;
@@ -60,4 +98,63 @@
   text-align: center;
   cursor: pointer;
   line-height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  header .menu {
+    /* initial : 요소가 가진 초기값 */
+    display: initial;
+    margin-right: 20px;
+  }
+
+  #gnb {
+    display: none;
+    position: absolute;
+    right: left;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #gnb.on {
+    display: block;
+    overflow: hidden;
+  }
+
+  #gnbList {
+    width: 300px;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    z-index: 100;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%);
+    animation: slide 0.4s forwards;
+  }
+
+  #gnbList li a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translate(0);
+  }
 }

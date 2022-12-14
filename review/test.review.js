@@ -9,7 +9,7 @@ let userList = [
   { name: "minseok", age: 43 },
 ];
 
-// filter의 콜백함수의 리턴값은 boolean (true/false)
+//filter의 콜백함수의 리턴값은 boolean (true/false)
 let filterArr = userList.filter(function (user) {
   return user.age >= 30;
 });
@@ -20,11 +20,17 @@ let result = filterArr.map(function (user) {
 
 // 메서드 체이닝
 
+/* let result02 = userList
+  .filter((user) => user.age >= 30)
+  .map((user) => user.name); 
+  console.log(result02)
+
+console.log(result02);*/
+
 let result02 = userList
   .filter((user) => user.age >= 30)
   .map((user) => user.name);
-
-console.log(result02);
+console.log(result);
 
 let numbers = [1, 2, 3, 4, 6, 7, 8];
 let result03 = [];

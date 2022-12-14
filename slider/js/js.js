@@ -23,3 +23,21 @@ btnList[2].addEventListener("click", function () {
   document.querySelector(".slidelist").style.transform = "translate(-200%)";
 });
 */
+
+let gnb = document.getElementById("gnb");
+gnb.addEventListener("click", function (e) {
+  // 실제 이벤트가 발생한 타겟과 이벤트가 바인딩된 요소와 동일할 때에만 실행
+  if (e.target === e.currentTarget)
+    setTimeout(function () {
+      gnb.classList.remove("on");
+    }, 2000);
+});
+
+// 메뉴 버튼 클릭시 메뉴 보이게!
+
+let menu = document.querySelector(".menu");
+let gnbList = document.getElementById("gnbList");
+
+menu.addEventListener("click", function () {
+  gnb.classList.add("on");
+});
